@@ -1,16 +1,12 @@
 *** Settings ***
 Library    Selenium2Library
 Resource    ../Resources/register_res.robot
-Resource    ../Resources/register_res.robot
 
 *** Variables ***
-${BROWSER}                        Chrome
-${SIGNUP_URL}                     https://brick-qa-assignment.herokuapp.com/
 ${LOGIN_PAGE}                     //*[@id="myform"]/div[7]/p/a
 ${EMAIL_OR_USERNAME}              //*[@id="your_email"]
 ${LOGIN_PASSWORD}                 //*[@id="password"]
 ${LOGIN_BUTTON}                   //*[@id="myform"]/div[3]/input
-${DELAY}                          0
 
 *** Keywords ***
 Open Login Page
