@@ -1,10 +1,13 @@
 *** Settings ***
 Library    Selenium2Library
+Library    ../Libs/custom_lib.py
+Library    Selenium2Library
+Library    ../Libs/custom_lib.py
 
 *** Variables ***
 ${BROWSER}                  Chrome
 ${SIGNUP_URL}               https://brick-qa-assignment.herokuapp.com/
-${VALID_USER}               anas_em2@g.co
+${VALID_USER}               anas_em1@g.co
 ${VALID_PASSWORD}           123456
 ${FIRST_NAME}               //*[@id="firstName"]
 ${LAST_NAME}                //*[@id="lastName"]
@@ -31,7 +34,7 @@ Register Page Should be Open
 Input All Data
     Input First Name
     Input Last Name
-    Input Email
+    Input Random Email
     Input Phone Number
     Input Address
     Input Password
@@ -52,6 +55,11 @@ Input Last Name
 
 Input Email
     input text    ${EMAIL}    ${valid_user}
+
+Input Random Email
+    ${RANDOM_EMAIL}    generate random emails    ${5}
+    set global variable    ${VALID_RANDOM_EMAIL}    ${RANDOM_EMAIL}
+    input text    ${EMAIL}    ${VALID_RANDOM_EMAIL}
 
 Input Phone Number
     input text    ${PHONE_NUMBER}    +6212345678901

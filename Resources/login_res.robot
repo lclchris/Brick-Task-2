@@ -1,6 +1,7 @@
 *** Settings ***
 Library    Selenium2Library
 Resource    ../Resources/register_res.robot
+Resource    ../Resources/register_res.robot
 
 *** Variables ***
 ${BROWSER}                        Chrome
@@ -20,7 +21,7 @@ Login Page Should be Open
     title should be    Login
 
 Input Email/Username
-    input text    ${EMAIL_OR_USERNAME}    ${VALID_USER}
+    input text    ${EMAIL_OR_USERNAME}    ${VALID_RANDOM_EMAIL}
 
 Input Login Password
     input text    ${LOGIN_PASSWORD}    ${VALID_PASSWORD}

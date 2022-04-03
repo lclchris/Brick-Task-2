@@ -1,6 +1,5 @@
 *** Settings ***
 Resource    ../Resources/register_res.robot
-Resource    ../Resources/login_res.robot
 
 *** Test Cases ***
 Valid Register

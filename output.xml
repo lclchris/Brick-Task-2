@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.10 on darwin)" generated="20220403 16:41:45.944" rpa="false">
+<suite id="s1" name="Tests" source="/Users/parkee/PycharmProjects/Brick/Tests">
+<suite id="s1-s1" name="01 Auto Register" source="/Users/parkee/PycharmProjects/Brick/Tests/01_auto_register.robot">
+<test id="s1-s1-t1" name="Valid Register">
+<kw name="Open Browser To Sign Up Page" library="register_res">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SIGNUP_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20220403 16:41:46.214" level="INFO">Opening browser 'Chrome' to base url 'https://brick-qa-assignment.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20220403 16:41:46.214" endtime="20220403 16:42:01.206"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220403 16:42:01.208" endtime="20220403 16:42:01.345"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20220403 16:42:01.346" endtime="20220403 16:42:01.348"></status>
+</kw>
+<kw name="Register Page Should be Open" library="register_res">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Brick Sign Up Form</arg>
+</arguments>
+<msg timestamp="20220403 16:42:01.353" level="INFO">Page title is 'Brick Sign Up Form'.</msg>
+<status status="PASS" starttime="20220403 16:42:01.349" endtime="20220403 16:42:01.353"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:01.348" endtime="20220403 16:42:01.353"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:41:46.214" endtime="20220403 16:42:01.353"></status>
+</kw>
+<kw name="Input All Data" library="register_res">
+<kw name="Input First Name" library="register_res">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${FIRST_NAME}</arg>
+<arg>Anastasia</arg>
+</arguments>
+<msg timestamp="20220403 16:42:01.354" level="INFO">Typing text 'Anastasia' into text field '//*[@id="firstName"]'.</msg>
+<status status="PASS" starttime="20220403 16:42:01.354" endtime="20220403 16:42:01.518"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:01.354" endtime="20220403 16:42:01.518"></status>
+</kw>
+<kw name="Input Last Name" library="register_res">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LAST_NAME}</arg>
+<arg>Emily</arg>
+</arguments>
+<msg timestamp="20220403 16:42:01.519" level="INFO">Typing text 'Emily' into text field '//*[@id="lastName"]'.</msg>
+<status status="PASS" starttime="20220403 16:42:01.519" endtime="20220403 16:42:01.588"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:01.519" endtime="20220403 16:42:01.588"></status>
+</kw>
+<kw name="Input Random Email" library="register_res">
+<kw name="Generate Random Emails" library="custom_lib">
+<arguments>
+<arg>${5}</arg>
+</arguments>
+<assign>
+<var>${RANDOM_EMAIL}</var>
+</assign>
+<msg timestamp="20220403 16:42:01.589" level="INFO">${RANDOM_EMAIL} = ['bgjik@mail.kz']</msg>
+<status status="PASS" starttime="20220403 16:42:01.588" endtime="20220403 16:42:01.589"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${VALID_RANDOM_EMAIL}</arg>
+<arg>${RANDOM_EMAIL}</arg>
+</arguments>
+<msg timestamp="20220403 16:42:01.590" level="INFO">${VALID_RANDOM_EMAIL} = ['bgjik@mail.kz']</msg>
+<status status="PASS" starttime="20220403 16:42:01.589" endtime="20220403 16:42:01.590"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${EMAIL}</arg>
+<arg>${VALID_RANDOM_EMAIL}</arg>
+</arguments>
+<msg timestamp="20220403 16:42:01.590" level="INFO">Typing text '['bgjik@mail.kz']' into text field '//*[@id="email"]'.</msg>
+<status status="PASS" starttime="20220403 16:42:01.590" endtime="20220403 16:42:01.655"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:01.588" endtime="20220403 16:42:01.656"></status>
+</kw>
+<kw name="Input Phone Number" library="register_res">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PHONE_NUMBER}</arg>
+<arg>+6212345678901</arg>
+</arguments>
+<msg timestamp="20220403 16:42:01.656" level="INFO">Typing text '+6212345678901' into text field '//*[@id="phoneNumber"]'.</msg>
+<status status="PASS" starttime="20220403 16:42:01.656" endtime="20220403 16:42:01.728"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:01.656" endtime="20220403 16:42:01.728"></status>
+</kw>
+<kw name="Input Address" library="register_res">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ADDRESS}</arg>
+<arg>Jakarta</arg>
+</arguments>
+<msg timestamp="20220403 16:42:01.729" level="INFO">Typing text 'Jakarta' into text field '//*[@id="address"]'.</msg>
+<status status="PASS" starttime="20220403 16:42:01.729" endtime="20220403 16:42:01.856"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:01.729" endtime="20220403 16:42:01.856"></status>
+</kw>
+<kw name="Input Password" library="register_res">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD}</arg>
+<arg>${VALID_PASSWORD}</arg>
+</arguments>
+<msg timestamp="20220403 16:42:01.857" level="INFO">Typing text '123456' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20220403 16:42:01.857" endtime="20220403 16:42:01.924"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:01.857" endtime="20220403 16:42:01.924"></status>
+</kw>
+<kw name="Input Confirm Password" library="register_res">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CONFIRM_PASSWORD}</arg>
+<arg>${VALID_PASSWORD}</arg>
+</arguments>
+<msg timestamp="20220403 16:42:01.925" level="INFO">Typing text '123456' into text field '//*[@id="confirm_password"]'.</msg>
+<status status="PASS" starttime="20220403 16:42:01.925" endtime="20220403 16:42:01.988"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:01.924" endtime="20220403 16:42:01.988"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:01.354" endtime="20220403 16:42:01.989"></status>
+</kw>
+<kw name="Submit Credentials" library="register_res">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${REGISTER_BUTTON}</arg>
+</arguments>
+<msg timestamp="20220403 16:42:01.989" level="INFO">Clicking button '//*[@id="myform"]/div[7]/input'.</msg>
+<status status="PASS" starttime="20220403 16:42:01.989" endtime="20220403 16:42:06.390"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:01.989" endtime="20220403 16:42:06.390"></status>
+</kw>
+<kw name="Show Success Box" library="register_res">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SUCCESS_BOX}</arg>
+</arguments>
+<status status="PASS" starttime="20220403 16:42:06.392" endtime="20220403 16:42:06.419"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${SUCCESS_BOX}</arg>
+<arg>Success</arg>
+</arguments>
+<msg timestamp="20220403 16:42:06.420" level="INFO">Verifying element '//*[@id="swal2-title"]' contains exact text 'Success'.</msg>
+<status status="PASS" starttime="20220403 16:42:06.420" endtime="20220403 16:42:06.441"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:06.390" endtime="20220403 16:42:06.441"></status>
+</kw>
+<kw name="Click OK on Success Box" library="register_res">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${SUCCESS_BOX_OK_BUTTON}</arg>
+</arguments>
+<msg timestamp="20220403 16:42:06.443" level="INFO">Clicking button '//*[@type="button" and text()="OK"]'.</msg>
+<status status="PASS" starttime="20220403 16:42:06.443" endtime="20220403 16:42:06.502"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:06.441" endtime="20220403 16:42:06.502"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220403 16:42:06.502" endtime="20220403 16:42:06.593"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:41:46.213" endtime="20220403 16:42:06.593" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20220403 16:41:45.971" endtime="20220403 16:42:06.595"></status>
+</suite>
+<suite id="s1-s2" name="02 Auto Login" source="/Users/parkee/PycharmProjects/Brick/Tests/02_auto_login.robot">
+<test id="s1-s2-t1" name="Valid Login">
+<kw name="Open Browser To Sign Up Page" library="register_res">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SIGNUP_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20220403 16:42:06.607" level="INFO">Opening browser 'Chrome' to base url 'https://brick-qa-assignment.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20220403 16:42:06.607" endtime="20220403 16:42:21.104"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220403 16:42:21.104" endtime="20220403 16:42:21.240"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20220403 16:42:21.240" endtime="20220403 16:42:21.241"></status>
+</kw>
+<kw name="Register Page Should be Open" library="register_res">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Brick Sign Up Form</arg>
+</arguments>
+<msg timestamp="20220403 16:42:21.246" level="INFO">Page title is 'Brick Sign Up Form'.</msg>
+<status status="PASS" starttime="20220403 16:42:21.241" endtime="20220403 16:42:21.246"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:21.241" endtime="20220403 16:42:21.246"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:06.607" endtime="20220403 16:42:21.246"></status>
+</kw>
+<kw name="Open Login Page" library="login_res">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_PAGE}</arg>
+</arguments>
+<msg timestamp="20220403 16:42:21.247" level="INFO">Clicking element '//*[@id="myform"]/div[7]/p/a'.</msg>
+<status status="PASS" starttime="20220403 16:42:21.247" endtime="20220403 16:42:24.280"></status>
+</kw>
+<kw name="Login Page Should be Open" library="login_res">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20220403 16:42:24.284" level="INFO">Page title is 'Login'.</msg>
+<status status="PASS" starttime="20220403 16:42:24.281" endtime="20220403 16:42:24.285"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:24.280" endtime="20220403 16:42:24.285"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:21.246" endtime="20220403 16:42:24.285"></status>
+</kw>
+<kw name="Input Email/Username" library="login_res">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${EMAIL_OR_USERNAME}</arg>
+<arg>${VALID_RANDOM_EMAIL}</arg>
+</arguments>
+<msg timestamp="20220403 16:42:24.286" level="INFO">Typing text '['bgjik@mail.kz']' into text field '//*[@id="your_email"]'.</msg>
+<status status="PASS" starttime="20220403 16:42:24.286" endtime="20220403 16:42:24.407"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:24.285" endtime="20220403 16:42:24.408"></status>
+</kw>
+<kw name="Input Login Password" library="login_res">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${VALID_PASSWORD}</arg>
+</arguments>
+<msg timestamp="20220403 16:42:24.408" level="INFO">Typing text '123456' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20220403 16:42:24.408" endtime="20220403 16:42:24.473"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:24.408" endtime="20220403 16:42:24.473"></status>
+</kw>
+<kw name="Submit Login Credentials" library="login_res">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20220403 16:42:24.473" level="INFO">Clicking button '//*[@id="myform"]/div[3]/input'.</msg>
+<status status="PASS" starttime="20220403 16:42:24.473" endtime="20220403 16:42:38.187"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:24.473" endtime="20220403 16:42:38.187"></status>
+</kw>
+<kw name="Show Success Box" library="register_res">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SUCCESS_BOX}</arg>
+</arguments>
+<status status="PASS" starttime="20220403 16:42:38.188" endtime="20220403 16:42:38.210"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${SUCCESS_BOX}</arg>
+<arg>Success</arg>
+</arguments>
+<msg timestamp="20220403 16:42:38.211" level="INFO">Verifying element '//*[@id="swal2-title"]' contains exact text 'Success'.</msg>
+<status status="PASS" starttime="20220403 16:42:38.211" endtime="20220403 16:42:38.228"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:38.187" endtime="20220403 16:42:38.229"></status>
+</kw>
+<kw name="Click OK on Success Box" library="register_res">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${SUCCESS_BOX_OK_BUTTON}</arg>
+</arguments>
+<msg timestamp="20220403 16:42:38.230" level="INFO">Clicking button '//*[@type="button" and text()="OK"]'.</msg>
+<status status="PASS" starttime="20220403 16:42:38.229" endtime="20220403 16:42:38.291"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:38.229" endtime="20220403 16:42:38.291"></status>
+</kw>
+<kw name="Dashboard Brick Should be Open" library="login_res">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Brick Dashboard</arg>
+</arguments>
+<msg timestamp="20220403 16:42:38.296" level="INFO">Page title is 'Brick Dashboard'.</msg>
+<status status="PASS" starttime="20220403 16:42:38.292" endtime="20220403 16:42:38.296"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:38.291" endtime="20220403 16:42:38.296"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220403 16:42:38.297" endtime="20220403 16:42:38.374"></status>
+</kw>
+<status status="PASS" starttime="20220403 16:42:06.606" endtime="20220403 16:42:38.374" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20220403 16:42:06.596" endtime="20220403 16:42:38.376"></status>
+</suite>
+<status status="PASS" starttime="20220403 16:41:45.946" endtime="20220403 16:42:38.378"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" id="s1-s1" name="01 Auto Register">Tests.01 Auto Register</stat>
+<stat pass="1" fail="0" id="s1-s2" name="02 Auto Login">Tests.02 Auto Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
