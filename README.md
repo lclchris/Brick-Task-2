@@ -66,7 +66,7 @@ these commands:
 Running tests
 -------------
 
-The `test cases`_ are located in the ``Tests`` directory. They can be
+The `test cases` are located in the ``Tests`` directory. They can be
 executed using the ``robot`` command::
 
     robot Tests
