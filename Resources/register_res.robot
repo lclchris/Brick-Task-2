@@ -1,8 +1,6 @@
 *** Settings ***
 Library    Selenium2Library
 Library    ../Libs/custom_lib.py
-Library    Selenium2Library
-Library    ../Libs/custom_lib.py
 
 *** Variables ***
 ${BROWSER}                  Chrome
